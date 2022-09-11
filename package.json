@@ -1,0 +1,24 @@
+{
+  "name": "spa-universe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendelcutrim/spa-universe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wendelcutrim/spa-universe/issues"
+  },
+  "homepage": "https://github.com/wendelcutrim/spa-universe#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
