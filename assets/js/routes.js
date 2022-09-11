@@ -12,9 +12,9 @@ function router(event) {
 
     event.preventDefault();
 
-    window.history.pushState({}, "", event.target.href)
+    window.history.pushState({}, "", event.target.href);
 
-    handleView()
+    handleView();
 }
 
 function handleView() {
@@ -28,7 +28,6 @@ async function fetchRoute(endPoint) {
     const response = await fetch(endPoint);
 
     const data = await response.text();
-    console.log(data);
 
     mountView(data);
 }
@@ -36,7 +35,10 @@ async function fetchRoute(endPoint) {
 function mountView(html) {
     const app = document.getElementById('app');
 
+    const {pathname} = window.location;
+
     removePreviousView()
+    changeBgBody(pathname)
 
     return app.insertAdjacentHTML("beforeend", html);
 }
@@ -48,6 +50,20 @@ function removePreviousView() {
         app.removeChild(app.childNodes[0]);
     }
     
+}
+
+function changeBgBody(event) {
+    const bg = document.querySelector('body');
+
+    console.log(event)
+
+    if (event == "/universe") {
+        bg.style.backgroundImage = "url('./assets/img/mountains-universe-2.png')";
+    } else if (event == "/explorer") {
+        bg.style.backgroundImage = "url('./assets/img/mountains-universe-3.png')";
+    } else {
+        bg.style.backgroundImage = "url('./assets/img/mountains-universe-1.png')";
+    }
 }
 
 handleView()

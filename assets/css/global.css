@@ -26,7 +26,7 @@ a {
 }
 
 body {
-    background-image: url('../img/mountains-universe-1\ 1.png');
+    min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 1.6rem;
@@ -46,6 +46,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 32px;
+    margin: 0 7.2rem;
 }
 
 nav a {

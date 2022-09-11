@@ -1,5 +1,23 @@
 @import url('./global.css');
 
+#app {
+    margin: 0 7.2rem;
+}
+
+.page-paragraph {
+    color: var(--p-text-color);
+    line-height: 3.6rem;
+    font-size: var(--p-text-font-size);
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.page-title {
+    color: var(--h1-title-color);
+    font-size: var(--h1-title-font-size);
+    font-weight: var(--h1-title-font-weight);
+}
+
 #home {
     display: flex;
     flex-direction: column;
@@ -24,6 +42,7 @@
     border-radius: .5rem;
     text-transform: uppercase;
     transition: all .6s;
+
 }
 
 #home a:hover {
@@ -31,20 +50,6 @@
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.151);
     animation: changeBorderColor 2s infinite;
-}
-
-.page-paragraph {
-    color: var(--p-title-color);
-    line-height: 3.6rem;
-    font-size: var(--p-text-font-size);
-    margin-top: 3rem;
-    width: 50%;
-}
-
-.page-title {
-    color: var(--h1-title-color);
-    font-size: var(--h1-title-font-size);
-    font-weight: var(--h1-title-font-weight);
 }
 
 #universe {
@@ -55,18 +60,12 @@
     margin: 8rem 0;
 }
 
-#universe h1 {
-    color: var(--h1-title-color);
-    font-size: var(--h1-title-font-size);
-    font-weight: var(--h1-title-font-weight);
-}
-
-#universe p {
-    color: var(--p-title-color);
-    line-height: 3.6rem;
-    font-size: var(--p-text-font-size);
-    margin-top: 3rem;
-    width: 50%;
+#explorer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    margin: 8rem 0;
 }
 
 @keyframes changeBorderColor {
