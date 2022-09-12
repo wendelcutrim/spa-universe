@@ -189,5 +189,9 @@
         width: 100%;
     }
 
+    #not-found div img {
+        max-width: 90%;
+    }
+
    
 }
