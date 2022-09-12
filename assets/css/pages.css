@@ -28,11 +28,6 @@
     font-size: 1.6rem;
 }
 
-#home h1 {
-    color: var(--h1-title-color);
-    font-size: var(--h1-title-font-size);
-    font-weight: var(--h1-title-font-weight);
-}
 #home a {
     margin: 2.4rem 0;
     background-color: var(--btn-primary-color);
@@ -42,7 +37,6 @@
     border-radius: .5rem;
     text-transform: uppercase;
     transition: all .6s;
-
 }
 
 #home a:hover {
@@ -68,10 +62,27 @@
     margin: 8rem 0;
 }
 
+#not-found {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin: 8rem 0;
+}
+
+#not-found div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+#not-found div img {
+    max-width: 50%;
+}
+
 @keyframes changeBorderColor {
     0% {
-        border: 2px solid red;
-        color: black
+        border: 2px solid gold;
     }
 
     50% {
@@ -81,8 +92,102 @@
     }
 
     100% {
-        border: 2px solid blue;
+        border: 2px solid white;
         color: white;
 
     }
+}
+
+@media (max-width: 768px) {
+    nav {
+        font-size: 1.6rem;
+        gap: 0;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    .page-paragraph {
+        width: 80%;
+        text-align: justify;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+    #home a:hover {
+        transform: none;
+        font-weight: 400;
+        background-color: transparent;
+        animation: none;
+    }
+
+    #universe {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #explorer {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    :root {   
+        --h1-title-color: white;
+        --h1-title-font-size: 2.8rem;
+        --p-text-font-size: 1.6rem;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav #logo {
+        display: block;
+    }
+
+    nav .nav-button {
+        display: block;
+    }
+
+    nav .nav-button span {
+        font-size: 3.8rem;
+    }
+
+    .page-paragraph {
+        width: 100%;
+        text-align: justify;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #home a {
+        margin: 2.4rem 0;
+        background-color: var(--btn-primary-color);
+        border: var(--btn-primary-border);
+        color: white;
+        padding: 1.2rem 3.2rem;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all .6s;
+        width: 100%;
+    }
+
+   
 }

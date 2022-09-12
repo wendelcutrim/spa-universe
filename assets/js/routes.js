@@ -1,5 +1,8 @@
 console.log("Routes JS");
 
+const menuMobile = document.querySelector('.menu-mobile');
+
+
 const routes = {
     "/": "../../pages/home.html",
     "/universe": "../../pages/universe.html",
@@ -37,8 +40,9 @@ function mountView(html) {
 
     const {pathname} = window.location;
 
-    removePreviousView()
-    changeBgBody(pathname)
+    closeMobileMenu();
+    removePreviousView();
+    changeBgBody(pathname);
 
     return app.insertAdjacentHTML("beforeend", html);
 }
@@ -64,6 +68,14 @@ function changeBgBody(event) {
     } else {
         bg.style.backgroundImage = "url('./assets/img/mountains-universe-1.png')";
     }
+}
+
+function handleMobileMenu() {
+    menuMobile.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+    menuMobile.classList.remove('open');
 }
 
 handleView()

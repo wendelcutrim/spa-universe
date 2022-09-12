@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="./assets/js/routes.js" defer></script>
 
@@ -19,14 +20,27 @@
 <body>
     <div class="container">
         <nav>
-            <a href="/">
+            <a href="/" id="logo">
                 <img src="./assets/img/logo.svg" alt="Logo">
             </a>
             <a href="/" onclick="router()">Home</a>
             <a href="/universe" onclick="router()">O Universo</a>
             <a href="/explorer" onclick="router()">Exploração</a>
+            <div class="nav-button" id="btn-open" onclick="handleMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
         </nav>
+
         <div id="app"></div>
+
+        <div class="menu-mobile">
+            <a href="/" onclick="router()">Home</a>
+            <a href="/universe" onclick="router()">O Universo</a>
+            <a href="/explorer" onclick="router()">Exploração</a>
+            <button class="close" onclick="handleMobileMenu()">
+                <span class="material-symbols-outlined ">close</span>
+            </button>
+        </div>
     </div>
 </body>
 </html>
